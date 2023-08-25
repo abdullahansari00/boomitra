@@ -1,3 +1,8 @@
+"""
+Download the data from S3 bucket in the empty "s3" folder using the following command:
+`aws s3 cp --no-sign-request s3://sentinel-cogs/sentinel-s2-l2a-cogs/36/N/YF/2023/6/S2B_36NYF_20230605_0_L2A/ s3 --recursive`
+"""
+
 import rasterio
 import geopandas as gpd
 import numpy as np
