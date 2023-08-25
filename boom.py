@@ -3,6 +3,14 @@ Download the data from S3 bucket in the empty "s3" folder using the following co
 `aws s3 cp --no-sign-request s3://sentinel-cogs/sentinel-s2-l2a-cogs/36/N/YF/2023/6/S2B_36NYF_20230605_0_L2A/ s3 --recursive`
 """
 
+"""
+Referred follwing links for the below code:
+
+https://rasterio.readthedocs.io/en/stable/quickstart.html
+https://rasterio.readthedocs.io/en/stable/topics/masking-by-shapefile.html
+https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.to_crs.html
+"""
+
 import rasterio
 import geopandas as gpd
 import numpy as np
@@ -47,11 +55,3 @@ plt.imshow(ndvi[0], cmap='RdYlGn', vmin=-1, vmax=1)
 plt.colorbar(label='NDVI')
 plt.savefig("ndvi.png")
 plt.close()
-
-"""
-Referred follwing links for the above code:
-
-https://rasterio.readthedocs.io/en/stable/quickstart.html
-https://rasterio.readthedocs.io/en/stable/topics/masking-by-shapefile.html
-https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.to_crs.html
-"""
