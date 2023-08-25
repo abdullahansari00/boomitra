@@ -1,0 +1,75 @@
+{
+    "type": "FeatureCollection",
+    "name": "sample_polygon",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "b79a6329-4c4b-4fbb-8d3d-d0c9a89e7482",
+                "Farmer Name": "Josephine Koiser",
+                "Farmer Phone": 255000000000.0,
+                "Contractor Name": "JEPKOSGEI SEREM",
+                "Contractor Phone": 255000000000.0,
+                "Partner ID": 621366,
+                "Given Acres": 29.998547,
+                "Calculated Acres": 30.13462235,
+                "Status": "CONFIRMED",
+                "DOMSOI": "Fo",
+                "Soil_type": "Ferralsols",
+                "COUNTRY": "KENYA",
+                "NEW_CALCULATED_ACRES": 30.0
+            },
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                35.361316278576901,
+                                0.755628123412283
+                            ],
+                            [
+                                35.3591638058424,
+                                0.755624770942578
+                            ],
+                            [
+                                35.358525775373003,
+                                0.755643544772888
+                            ],
+                            [
+                                35.358569025993297,
+                                0.757317432566587
+                            ],
+                            [
+                                35.358670279383702,
+                                0.759143521717579
+                            ],
+                            [
+                                35.3597673028708,
+                                0.759176040647199
+                            ],
+                            [
+                                35.360480770468698,
+                                0.759170676700072
+                            ],
+                            [
+                                35.361437983810902,
+                                0.759134134810013
+                            ],
+                            [
+                                35.361316278576901,
+                                0.755628123412283
+                            ]
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
