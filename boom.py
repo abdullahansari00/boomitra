@@ -18,8 +18,8 @@ import matplotlib.pyplot as plt
 from rasterio.mask import mask
 
 # File paths
-red_band_path = 's3/B04.tif'
-nir_band_path = 's3/B08.tif'
+red_band_path = "s3/B04.tif"
+nir_band_path = "s3/B08.tif"
 polygon_path = "sample_polygon.geojson"
 
 # Read the polygon
@@ -36,7 +36,7 @@ with rasterio.open(red_band_path) as red_band_ds, rasterio.open(nir_band_path) a
     nir_image, _ = mask(nir_band_ds, [polygon_geometry], crop=True)
 
 # Calculate NDVI
-np.seterr(invalid='ignore')
+np.seterr(invalid="ignore")
 ndvi = np.divide((nir_image - red_image), (nir_image + red_image))
 
 # Calculate zonal statistics
@@ -45,13 +45,13 @@ min_ndvi = np.nanmin(ndvi)
 max_ndvi = np.nanmax(ndvi)
 
 # Save zonal statistics to a file
-with open("output.txt", 'w') as stats_file:
+with open("output.txt", "w") as stats_file:
     stats_file.write(f"Max NDVI: {max_ndvi}\n")
     stats_file.write(f"Mean NDVI: {mean_ndvi}\n")
     stats_file.write(f"Min NDVI: {min_ndvi}\n")
 
 # Plot and save NDVI image
-plt.imshow(ndvi[0], cmap='RdYlGn', vmin=-1, vmax=1)
-plt.colorbar(label='NDVI')
+plt.imshow(ndvi[0], cmap="RdYlGn", vmin=-1, vmax=1)
+plt.colorbar(label="NDVI")
 plt.savefig("ndvi.png")
 plt.close()
